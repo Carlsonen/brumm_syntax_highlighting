@@ -1,0 +1,25 @@
+{
+  "name": "brumm",
+  "displayName": "Brumm",
+  "description": "Brumm assembly language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "brumm",
+      "aliases": ["Brumm assembly language", "brumm"],
+      "extensions": [".brumm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "brumm",
+      "scopeName": "source.brumm",
+      "path": "./syntaxes/brumm.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.brumm",
+    "name": "Brumm assembly language",
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#keywords" },
+        { "include": "#numbers" },
+        { "include": "#label" },
+        { "include": "#opcode" },
+        { "include": "#condition" },
+        { "include": "#other" }
+    ],
+    "repository": {
+        "opcode": {
+            "name": "entity.name.function",
+            "match": "^\\s*[^ ]+"
+        },
+        "label": {
+            "name": "entity.name.type",
+            "match": "(?<=(def|call|goto)).*$"
+        },
+        "other": {
+            "name": "keyword.operator.new",
+            "match": "[^ ]+"
+        },
+        "condition": {
+            "name": "entity.other.attribute-name",
+            "match": "(?<=(if|if not)) [^ ]*"
+        },
+        "keywords": {
+            "name": "keyword.control.brumm",
+            "match": "^\\s*\\b(const|use|halt|def|if|return|goto|call)\\b|\\b(goto|not)\\b"
+        },
+        "numbers": {
+            "name": "constant.numeric",
+            "match": " [0-9]+| -[0-9]+"
+        },
+        "comments": {
+            "name": "comment.line",
+            "match": "\\s*# .*"
+        },
+        "colors": {
+            "name": "constant.numeric",
+            "name": "entity.name.function",
+            "name": "entity.other.attribute-name",
+            "name": "keyword.operator.new",
+            "name": "con",
+            "name": "entity.name.type",
+            "name": "entity.name.type"
+        }
+    }
+}
